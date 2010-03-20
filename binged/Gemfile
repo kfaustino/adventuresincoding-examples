@@ -1,0 +1,12 @@
+# A sample Gemfile
+source :gemcutter
+#
+gem "rails", "~> 2.3.5", :require => nil
+gem "sqlite3-ruby", :require => "sqlite3"
+
+gem "haml", "2.2.21"
+gem "compass", "0.8.17"
+
+group :development do
+  gem 'mongrel'
+end

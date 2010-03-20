@@ -1,0 +1,28 @@
+@import blueprint/reset.sass
+@import partials/base.sass
+@import blueprint
+@import compass/layout.sass
+@import compass/utilities.sass
+
++blueprint
++blueprint-typography
+
+body  
+  +blueprint-utilities
+  +blueprint-debug
+  +blueprint-interaction
+  :background-color = !background_color
+
+#container
+  +container
+  :background-color = !content_background_color
+  :border 1px solid #000
+  :margin-top = !margin
+  :min-height 500px
+
+body.one-col
+  #content
+    +prepend(1)
+    +append(1)
+    +column(!blueprint_grid_columns - 2)
+    :margin-top = !padding

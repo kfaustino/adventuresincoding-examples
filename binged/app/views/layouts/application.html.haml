@@ -1,0 +1,14 @@
+!!! 5
+%html
+  %head
+    %title Adventures In Coding - Binged
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }/    
+    = stylesheet_link_tag "compiled/screen", :media => 'screen, projection'  
+    = stylesheet_link_tag 'compiled/print', :media => 'print'
+    /[if lt IE 8]
+      = stylesheet_link_tag 'compiled/ie', :media => 'screen, projection'            
+    = yield :header   
+  %body.one-col{body_attributes}
+    #container
+      #content
+        = yield
